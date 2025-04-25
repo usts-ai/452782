@@ -22,12 +22,12 @@ const data: DataPoint[] = [
 const AnalyticsChart: React.FC = () => {
   return (
     <motion.div 
-      className="bg-white rounded-xl shadow-md p-6 h-full"
+      className="bg-white rounded-xl shadow-md p-5 h-auto"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
     >
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold text-gray-800">Évolution des métriques</h3>
         <div className="flex items-center space-x-2">
           <div className="flex items-center">
@@ -44,11 +44,11 @@ const AnalyticsChart: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="h-80">
+      <div className="h-64">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             data={data}
-            margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+            margin={{ top: 5, right: 20, left: 0, bottom: 0 }}
           >
             <defs>
               <linearGradient id="colorApprenants" x1="0" y1="0" x2="0" y2="1">
